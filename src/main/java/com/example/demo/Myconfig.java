@@ -14,9 +14,9 @@ import java.net.UnknownHostException;
 public class Myconfig {
     @Bean
     public TransportClient client() throws UnknownHostException{
-        Settings setting = Settings.builder().put("cluster.name","wali").build();
+            Settings setting = Settings.builder().put("cluster.name","wali").build();
 
-        TransportClient client = new PreBuiltTransportClient(setting) .addTransportAddress(new TransportAddress(InetAddress.getByName("locoalhost"), 9300));
-        return  client;
+            TransportClient client = new PreBuiltTransportClient(setting) .addTransportAddress(new TransportAddress(InetAddress.getByName("127.0.0.1"), 9300));
+            return  client;
     }
 }

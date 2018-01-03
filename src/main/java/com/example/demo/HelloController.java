@@ -20,7 +20,7 @@ public class HelloController {
         if(id.isEmpty()){
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
-        GetResponse result = this.client.prepareGet("book","novel",id).get();
+        GetResponse result = this.client.prepareGet("people","men",id).get();
         if(!result.isExists()){
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
